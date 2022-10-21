@@ -1,5 +1,6 @@
-# The entry point of the program
 import sys
+
+# The entry point of the program.
 
 def run(*args):
     # Create default board
