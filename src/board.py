@@ -7,7 +7,7 @@ class Board:
 
     # Create a default board, which is an 8 x 8 list of lists containing tiles.
     def __init__(self):
-        self.board = [[tile() for i in range(c.COLS)] for j in range(c.ROWS)]
+        self.board = [[tile() for file in range(c.COLS)] for rank in range(c.ROWS)]
         self.size = (c.ROWS, c.COLS)
 
     # Return the tile at (row, col)

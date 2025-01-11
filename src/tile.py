@@ -3,26 +3,28 @@
 class Tile:
 
     # Define a new tile object with default settings
-    def __init__(self):
+    # 
+    def __init__(self, row, col):
+        self.row = row
+        self.col = col
+        self.name = str(col) + str(8 - row)
+        if row % 2 == 0 and col % 2 == 0:
+            self.color = "w"
+        else:
+            self.color = "b"
         self.piece = None
         self.attacked = False
-    
-    # Return if this tile is under attack
-    def check_attack(self):
-        return self.attacked
 
     # Set the piece of this tile to pc
     def set_piece(self, pc):
         self.piece = pc
-    
-    # Set the attacked value of this tile to attacked
-    def set_attacked(self, atk):
-        self.attacked = atk
 
     # Get the piece of this tile
     def get_piece(self):
         return self.piece
 
-    # Get the attacked status of this file
-    def get_attacked(self):
-        return self.attacked
+    def get_color(self):
+        return self.color
+    
+    def get_name(self):
+        return self.name
